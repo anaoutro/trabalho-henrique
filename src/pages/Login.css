@@ -1,0 +1,119 @@
+.login {
+  display: flex;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+
+.login-left {
+  flex: 0 0 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 80px;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(90deg, var(--bg) 80%, transparent);
+}
+
+.login-heading {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.login-desc {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 400px;
+  font-weight: 400;
+}
+
+.login-google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: #f8fafc;
+  color: #090a0f;
+  border: 1px solid #f8fafc;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.login-google-btn:hover {
+  background: transparent;
+  color: #f8fafc;
+  border-color: #f8fafc;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.login-footer {
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.login-footer strong {
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.login-right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.login-right::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, rgba(236, 72, 153, 0.03) 50%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .login-left {
+    flex: 0 0 450px;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .login {
+    flex-direction: column;
+  }
+
+  .login-left {
+    flex: none;
+    order: 2;
+    background: var(--bg);
+  }
+
+  .login-right {
+    min-height: 400px;
+    order: 1;
+  }
+}
