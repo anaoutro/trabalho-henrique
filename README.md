@@ -21,7 +21,7 @@ O sistema é construído como uma Single Page Application e dispõe de três rot
 
 ### Ana Maria do Céu Gomes
 -  Desenvolvedora Full Stack
-- Especialidade: Área de dados, Machine Learning, IA, animação web com 3D, WebGL e React.
+- Especialidade: Área de dados, Machine Learning, IA, animação web com 3D, WebGL 
 
 ### João Victor Garciano
 - Desenvolvedor Backend
